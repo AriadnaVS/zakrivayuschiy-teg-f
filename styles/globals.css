@@ -51,3 +51,34 @@ ol {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+:root {
+  --page-gradient: 
+    /* 1. Горизонтальные полоски (слева направо) */
+    repeating-linear-gradient(
+      to right,
+      #d3d3d3 0px,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    /* 2. Вертикальные полоски (сверху вниз) */
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3 0px,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    /* 3. Плавный затемняющий градиент сверху вниз */
+    linear-gradient(
+      to bottom,
+      #e7e7e7 0%,
+      #e7e7e7 0.01%,
+      #1a1a1a 100%
+    );
+}
+
+.list__item {
+  list-style: none;
+}

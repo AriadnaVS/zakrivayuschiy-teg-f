@@ -9,3 +9,26 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+.card__like-button,
+.save__card {
+  transition: box-shadow 0.3s ease;
+}
+
+.card__icon-button {
+  transition: border-color 0.3s ease;
+}
+
+/* Эффекты при фокусе для разных типов кнопок */
+.card__like-button:focus,
+.save__card:focus {
+  outline: none;
+  box-shadow: 2px 2px 0px var(--accent-color, #000);
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--accent-color, #000);
+}

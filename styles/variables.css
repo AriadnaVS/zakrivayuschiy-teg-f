@@ -1,1 +1,44 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  /* Имена шрифтов */
+  --font-main: 'Inter-Variable', sans-serif;
+  --font-accent: 'PressStart2P', monospace;
+  /* Веса шрифта Inter */
+  --font-weight-regular: 410;
+  --font-weight-bold: 715;
+
+  --grid-horizontal: repeating-linear-gradient(
+    to right,
+    #d3d3d3 0px,
+    #d3d3d3 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  
+  --grid-vertical: repeating-linear-gradient(
+    to bottom,
+    #d3d3d3 0px,
+    #d3d3d3 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  
+  --background-gradient: linear-gradient(
+    to bottom,
+    #e7e7e7 0%,
+    #e7e7e7 0.01%,
+    #1a1a1a 100%
+  );
+  
+  /* Композитный фон */
+  --page-background: 
+    var(--grid-horizontal),
+    var(--grid-vertical),
+    var(--background-gradient);
+
+  --button-text-color: #fff;
+  --button-hover-color: #000;
+  --button-shadow: 2px 2px 0px var(--accent-color);
+  --accent-color: #000;
+}
