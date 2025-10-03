@@ -292,9 +292,6 @@
   background-color: rgb(0 0 0 / 0.75);
 }
 
-.dialog {
-  transition: opacity 0.3s ease-in-out;
-}
 
 .dialog:not([open]) {
   opacity: 0;
@@ -306,6 +303,7 @@
   inset: 0;
   min-width: 341px;
   border: #000 2px solid;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .save .button__text {
@@ -338,7 +336,6 @@
 .dialog__text {
   font-family: var(--font-accent);
   font-size: 14px;
-  line-height: 1.5;
   margin-bottom: 20px;
   line-height: 21px;
   text-transform: uppercase;
