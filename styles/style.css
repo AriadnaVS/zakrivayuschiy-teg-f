@@ -1,14 +1,4 @@
-/* Здесь вы напишете основную часть стилей страницы.
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
 
 .page {
   min-inline-size: 320px;
@@ -46,13 +36,13 @@
   font-size: clamp(49px, 6.5vw, 65px);
   line-height: 1;
   margin-top: 122px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .accent__title {
   font-family: var(--font-accent);
   color: black;
-  font-size: 23px;
+  font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -63,12 +53,14 @@
   position: relative;
   padding-bottom: 63px;
   box-sizing: border-box;
+  font-size: 18px;
 }
 
 .card__title {
   padding: 4px 10px 4px;
-  line-height: 1;
-  font-variation-settings: "wght" var(--font-weight-bold);
+  font-size: 18px;
+  line-height: 1.15;
+  font-variation-settings: "wght" 715;
 }
 
 .card__picture {
@@ -96,9 +88,23 @@
   top: 25px;
   right: 25px;
   font-size: 14px;
-  -webkit-text-stroke: 1px #fff;
   opacity: 0.5;
+  mix-blend-mode: hard-light;
+  z-index: 2;
+
+  text-shadow: 
+    -1px -1px 0 #fff,
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff;
 }
+
+@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .card__tag {
+    text-shadow: none;
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+  }
 
 .card__text {
   line-height: 21px;
@@ -175,7 +181,7 @@
 }
 
 .card__image-neon {
-  filter: contrast(50%);
+  filter: contrast(50%) hue-rotate(90deg) saturate(200%);
 }
 
 .card__like-button {
@@ -453,6 +459,10 @@
     min-height: 55px;
   }
 
+  .accent__title {
+    font-size: 23px;
+  }
+
   .footer .accent__title {
     font-size: 14px;
   }
@@ -463,4 +473,3 @@
     width: 21px;
     height: 21px;
   }
-}
