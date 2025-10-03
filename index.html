@@ -94,7 +94,10 @@
                   </g>
                 </svg>
               </button>
-              <button type="button" class="card__like-button text-button text-button--blend">
+              <button
+                type="button"
+                class="card__like-button text-button text-button--blend"
+              >
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -228,7 +231,10 @@
                   </g>
                 </svg>
               </button>
-              <button type="button" class="card__like-button text-button text-button--blend">
+              <button
+                type="button"
+                class="card__like-button text-button text-button--blend"
+              >
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -296,7 +302,10 @@
                   </g>
                 </svg>
               </button>
-              <button type="button" class="card__like-button text-button text-button--blend">
+              <button
+                type="button"
+                class="card__like-button text-button text-button--blend"
+              >
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -365,7 +374,10 @@
                   </g>
                 </svg>
               </button>
-              <button type="button" class="card__like-button text-button text-button--blend">
+              <button
+                type="button"
+                class="card__like-button text-button text-button--blend"
+              >
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -431,7 +443,10 @@
                   </g>
                 </svg>
               </button>
-              <button type="button" class="card__like-button text-button text-button--blend">
+              <button
+                type="button"
+                class="card__like-button text-button text-button--blend"
+              >
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -499,7 +514,10 @@
                   </g>
                 </svg>
               </button>
-              <button type="button" class="card__like-button text-button text-button--blend">
+              <button
+                type="button"
+                class="card__like-button text-button text-button--blend"
+              >
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -577,48 +595,49 @@
         </li>
       </ul>
 
-    <section class="save">
-      <button
-        type="submit"
-        class="save__card text-button text-button--save"
-        onclick="window['save-dialog'].showModal()"
-        aria-controls="save-dialog">
-        <svg
-          class="floppy floppy-small"
-          viewBox="0 0 40 40"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <use href="./svg/sprite.svg#floppy" />
-        </svg>
-        <span class="button__text">Сохранить на память</span>
-      </button>
-    </section>
-
-    <!-- Модальное окно -->
-    <dialog id="save-dialog" class="dialog">
-      <div class="dialog__content">
-        <svg
-          class="floppy floppy-big"
-          viewBox="0 0 40 40"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <use href="./svg/sprite.svg#floppy" />
-        </svg>
-        <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
-      </div>
-
-      <form method="dialog">
+      <section class="save">
         <button
-          class="dialog__button text-button text-button--blend"
           type="submit"
+          class="save__card text-button text-button--save"
+          onclick="window['save-dialog'].showModal()"
+          aria-controls="save-dialog"
         >
-          <span class="button__text">ОК</span>
+          <svg
+            class="floppy floppy-small"
+            viewBox="0 0 40 40"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <use href="./svg/sprite.svg#floppy" />
+          </svg>
+          <span class="button__text">Сохранить на память</span>
         </button>
-      </form>
-    </dialog>
-    <script src="./scripts/like.js"></script>
+      </section>
+
+      <!-- Модальное окно -->
+      <dialog id="save-dialog" class="dialog">
+        <div class="dialog__content">
+          <svg
+            class="floppy floppy-big"
+            viewBox="0 0 40 40"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <use href="./svg/sprite.svg#floppy" />
+          </svg>
+          <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+        </div>
+
+        <form method="dialog">
+          <button
+            class="dialog__button text-button text-button--blend"
+            type="submit"
+          >
+            <span class="button__text">ОК</span>
+          </button>
+        </form>
+      </dialog>
+      <script src="./scripts/like.js"></script>
     </main>
   </body>
 </html>
