@@ -100,9 +100,18 @@
     text-stroke: 1px #fff;
   }
 }
+
 .card__text {
   line-height: 21px;
-  margin: 26px;
+  margin: 0 26px;
+}
+
+.card__text + .card__text {
+  margin-top: 26px;
+}
+
+.card__text:first-of-type {
+  margin-top: 26px;
 }
 
 .card__text:last-of-type {
@@ -292,9 +301,8 @@
 .dialog {
   position: fixed;
   inset: 0;
-  min-width: 341px;
+  max-width: 341px;
   padding: 0;
-  max-width: 357px;
   width: 100%;
   background-color: #fff;
   border: #000 2px solid;
@@ -331,7 +339,6 @@
 .dialog__text {
   font-family: var(--font-accent);
   font-size: 14px;
-  margin-bottom: 20px;
   line-height: 21px;
   text-transform: uppercase;
 }
@@ -341,7 +348,7 @@
   align-items: center;
   justify-content: center;
   padding: 10px 40px;
-  min-width: 130px;
+  min-width: 261px;
   min-height: 38px;
   margin: 0 auto 30px;
 }
@@ -366,7 +373,19 @@
   }
 
   .card__text {
-    margin: 25px;
+    margin: 0 25px;
+  }
+
+  .card__text + .card__text {
+    margin-top: 25px;
+  }
+
+  .card__text:first-of-type {
+    margin-top: 25px;
+  }
+
+  .card__text:last-of-type {
+    margin-bottom: 25px;
   }
 
   .save__card {
@@ -397,8 +416,7 @@
   }
 
   .dialog {
-    min-height: 191px;
-    min-width: 353px;
+    max-width: 353px;
   }
 
   .dialog__text {
